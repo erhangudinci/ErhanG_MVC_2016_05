@@ -13,6 +13,12 @@ namespace MvcTenta
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+           
+            routes.MapRoute(
+                name: "Sprite",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "Sprite", action = "Hexa", id = UrlParameter.Optional }
+            );
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
